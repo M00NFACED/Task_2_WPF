@@ -1,0 +1,147 @@
+﻿<Window x:Class="Task2_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task2_WPF"
+        xmlns:converters="clr-namespace:Task2_WPF.Converters"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <Window.Resources>
+        <converters:ObjectTypeConverter x:Key="ObjectTypeConverter" />
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Button Content="Add Point" Click="AddPoint_Click" Margin="5" />
+            <Button Content="Add Line" Click="AddLine_Click" Margin="5" />
+            <Button Content="Add Polygon" Click="AddPolygon_Click" Margin="5" />
+            <Button Content="Add Ellipse" Click="AddEllipse_Click" Margin="5" />
+
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="FiguresListView" Grid.Column="0" ItemsSource="{Binding Figures}" AlternationCount="2">
+                <ListView.Resources>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Padding" Value="5" />
+                        <Style.Triggers>
+                            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                                <Setter Property="Background" Value="#F0F0F0" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.Resources>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Converter={StaticResource ObjectTypeConverter}}" Width="100" />
+                        <GridViewColumn Header="Center Point" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock>
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="({0:F2}, {1:F2})">
+                                                <Binding Path="CenterX" />
+                                                <Binding Path="CenterY" />
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Radius X" DisplayMemberBinding="{Binding RadiusX, StringFormat={}{0:F2}}" Width="100" />
+                        <GridViewColumn Header="Radius Y" DisplayMemberBinding="{Binding RadiusY, StringFormat={}{0:F2}}" Width="100" />
+                        <GridViewColumn Header="Area" DisplayMemberBinding="{Binding Area, StringFormat={}{0:F2}}" Width="100" />
+                        <GridViewColumn Header="Bounding Left Lower Point" Width="120">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock>
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="({0}, {1})">
+                                                <Binding Path="BoundingRectangle[0]" />
+                                                <Binding Path="BoundingRectangle[1]" />
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Bounding Right Top Point" Width="120">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock>
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="({0}, {1})">
+                                                <Binding Path="BoundingRectangle[2]" />
+                                                <Binding Path="BoundingRectangle[3]" />
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Vertices">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ItemsControl ItemsSource="{Binding Vertices}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding StringFormat={}{0:F2}}" />
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal" />
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                    </ItemsControl>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Delete" Click="DeleteMenuItem_Click" />
+                    </ContextMenu>
+                </ListView.ContextMenu>
+            </ListView>
+
+            <StackPanel Grid.Column="1" Margin="5">
+                <TextBlock Text="X:" Margin="5" />
+                <TextBox x:Name="StartXTextBox" Margin="5" />
+                <TextBlock Text="Y:" Margin="5" />
+                <TextBox x:Name="StartYTextBox" Margin="5" />
+                <TextBlock Text="Radius X:" Margin="5" />
+                <TextBox x:Name="EndXTextBox" Margin="5" />
+                <TextBlock Text="Radius Y:" Margin="5" />
+                <TextBox x:Name="EndYTextBox" Margin="5" />
+                <Button Content="Add Vertex" Click="AddVertex_Click" Margin="5" />
+                <ListBox x:Name="VerticesListBox" Margin="5">
+                    <ListBox.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Delete" Click="RemoveVertex_Click" />
+                        </ContextMenu>
+                    </ListBox.ContextMenu>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding StringFormat={}{0:F2}}" Margin="5,0,0,0" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\bin\Debug\Task3_WPF.exe.config
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\bin\Debug\Task3_WPF.exe
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\bin\Debug\Task3_WPF.pdb
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\Task3_WPF.csproj.AssemblyReference.cache
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\MainWindow.g.cs
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\App.g.cs
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\Task3_WPF_MarkupCompile.cache
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\Task3_WPF_MarkupCompile.lref
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\MainWindow.baml
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\Task3_WPF.g.resources
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\Task3_WPF.Properties.Resources.resources
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\Task3_WPF.csproj.GenerateResource.cache
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\Task3_WPF.csproj.CoreCompileInputs.cache
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\Task3_WPF.exe
+C:\Users\ender\source\repos\Task3_WPF\Task3_WPF\obj\Debug\Task3_WPF.pdb

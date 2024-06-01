@@ -1,0 +1,17 @@
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\bin\Debug\DictionaryApp.exe.config
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\bin\Debug\DictionaryApp.exe
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\bin\Debug\DictionaryApp.pdb
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\DictionaryApp.csproj.AssemblyReference.cache
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\DictionaryApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\MainWindow.g.cs
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\App.g.cs
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\DictionaryApp_MarkupCompile.cache
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\DictionaryApp_MarkupCompile.lref
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\MainWindow.baml
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\DictionaryApp.g.resources
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\DictionaryApp.Properties.Resources.resources
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\DictionaryApp.csproj.GenerateResource.cache
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\DictionaryApp.csproj.CoreCompileInputs.cache
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\DictionaryApp.exe
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\DictionaryApp.pdb
+C:\Users\ender\source\repos\DictionaryApp\DictionaryApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
